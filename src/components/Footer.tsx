@@ -1,125 +1,138 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import {
+	Facebook,
+	Twitter,
+	Youtube,
+	Video,
+	Phone,
+	Mail,
+	ChevronUp,
+	MessageCircleMore,
+} from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+export default function Footer() {
+	return (
+		<footer className='relative text-gray-200'>
+			{/* Background */}
+			<div className="absolute inset-0 bg-[url('/footer.jpg')] bg-cover bg-center" />
+			<div className='absolute inset-0 bg-black/80' />
 
-  return (
-    <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">FT</span>
-              </div>
-              <span className="font-bold text-xl">First Taxis</span>
-            </div>
-            <p className="text-secondary-foreground/80 mb-4 leading-relaxed">
-              Your reliable local taxi service serving Gillingham, Shaftesbury, Mere, Wincanton, and surrounding areas. Fixed prices, 24/7 availability.
-            </p>
-            <p className="text-sm text-secondary-foreground/60">
-              Fully licensed and insured
-            </p>
-          </div>
+			<div className='relative z-10 mx-auto max-w-7xl px-6 py-24'>
+				<div className='grid gap-16 md:grid-cols-3'>
+					{/* ABOUT */}
+					<div className='text-center'>
+						<h3 className='mb-6 font-bold uppercase tracking-wide text-yellow-400'>
+							About Us
+						</h3>
+						<p className='mb-8 leading-relaxed text-xl'>
+							First Taxis provides reliable 24/7 taxi and airport transfer
+							services across Gillingham, Shaftesbury, Mere, and Wincanton.
+						</p>
+						<button className='rounded bg-orange-500 px-8 py-3.5 text-white hover:bg-orange-600 transition'>
+							BOOK A RIDE!
+						</button>
+					</div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li>
-                <a 
-                  href="tel:01747-123456" 
-                  className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  01747 123456
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="mailto:info@firsttaxis.co.uk" 
-                  className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
-                >
-                  <Mail className="w-5 h-5" />
-                  info@firsttaxis.co.uk
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-secondary-foreground/80">
-                <MapPin className="w-5 h-5" />
-                Gillingham, Dorset
-              </li>
-              <li className="flex items-center gap-2 text-secondary-foreground/80">
-                <Clock className="w-5 h-5" />
-                Open 24/7
-              </li>
-            </ul>
-          </div>
+					{/* SOCIAL */}
+					<div className='text-center'>
+						<h3 className='mb-6 text-lg font-bold uppercase tracking-wide text-yellow-400'>
+							Let's Get Social
+						</h3>
+						<p className='mb-8 leading-relaxed text-xl'>
+							Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae. In
+							his nemore temporibus consequuntur.
+						</p>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              {[
-                "Local Taxi Services",
-                "Airport Transfers",
-                "Executive Taxi Service",
-                "Wedding Taxi Hire",
-                "Hospital Appointments",
-                "School Runs",
-              ].map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href="#services" 
-                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
-                  >
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+						<div className='flex justify-center gap-5'>
+							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
+								<Facebook
+									size={30}
+									fill='black'
+									className='border-none'
+								/>
+							</span>
+							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
+								<Twitter
+									size={30}
+									fill='black'
+									className='border-none'
+								/>
+							</span>
+							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
+								<Youtube
+									size={30}
+									fill='black'
+									className='border-none'
+								/>
+							</span>
+							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
+								<Video
+									size={30}
+									fill='black'
+									className='border-none'
+								/>
+							</span>
+						</div>
+					</div>
 
-          {/* Areas */}
-          <div>
-            <h3 className="font-bold text-lg mb-4">Areas We Cover</h3>
-            <ul className="space-y-2">
-              {[
-                "Gillingham",
-                "Shaftesbury",
-                "Mere",
-                "Wincanton",
-                "Tisbury",
-                "Sturminster Newton",
-              ].map((area, index) => (
-                <li key={index}>
-                  <a 
-                    href="#areas" 
-                    className="text-secondary-foreground/80 hover:text-primary transition-colors"
-                  >
-                    {area}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+					{/* CONTACT */}
+					<div className='text-center text-xl'>
+						<h3 className='mb-6 font-bold uppercase tracking-wide text-yellow-400'>
+							Contact Us
+						</h3>
+						<p className='mb-8 leading-relaxed'>
+							Vim ad prima vivendum consetetur viderer feugiat at pro, mea
+							aperiam.
+						</p>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-secondary-foreground/10">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-secondary-foreground/60">
-            <p>© {currentYear} First Taxis. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+						<ul className='space-y-4 text-base'>
+							<li className='flex items-center gap-4'>
+								<Phone
+									size={18}
+									className='text-yellow-400'
+								/>
+								(001) 555-1234
+							</li>
+							<li className='flex items-center gap-4'>
+								<Mail
+									size={18}
+									className='text-yellow-400'
+								/>
+								office@yourwebsite.com
+							</li>
+							<li className='flex items-center gap-4'>
+								<span className='text-yellow-400 text-xl'>
+									<MessageCircleMore />
+								</span>
+								whatsapp
+							</li>
+						</ul>
+					</div>
+				</div>
 
-export default Footer;
+				{/* Scroll top */}
+				<div className='mt-20 flex justify-center'>
+					<button
+						onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+						className='flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-xl font-bold text-black hover:bg-yellow-500 transition'
+					>
+						<ChevronUp />
+					</button>
+				</div>
+			</div>
+
+			{/* Bottom bar */}
+			<div className='relative z-10 border-t border-white/10 py-5 text-center text-base text-gray-400'>
+				© 2026 First Taxis
+			</div>
+		</footer>
+	);
+}
+
+/* ---------- Social Icon ---------- */
+function SocialIcon({ children }: { children: React.ReactNode }) {
+	return (
+		<div className='flex h-11 w-11 cursor-pointer items-center justify-center rounded bg-white/20 text-white hover:bg-yellow-400 hover:text-black transition'>
+			{children}
+		</div>
+	);
+}
