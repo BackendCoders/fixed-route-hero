@@ -1,12 +1,12 @@
 import {
 	Facebook,
-	Twitter,
 	Youtube,
 	Video,
 	Phone,
 	Mail,
 	ChevronUp,
 	MessageCircleMore,
+	Instagram,
 } from 'lucide-react';
 
 export default function Footer() {
@@ -16,14 +16,14 @@ export default function Footer() {
 			<div className="absolute inset-0 bg-[url('/footer.jpg')] bg-cover bg-center" />
 			<div className='absolute inset-0 bg-black/80' />
 
-			<div className='relative z-10 mx-auto max-w-7xl px-6 py-24'>
+			<div className='relative z-10 mx-auto max-w-8xl px-6 py-10'>
 				<div className='grid gap-16 md:grid-cols-3'>
 					{/* ABOUT */}
 					<div className='text-center'>
 						<h3 className='mb-6 font-bold uppercase tracking-wide text-yellow-400'>
 							About Us
 						</h3>
-						<p className='mb-8 leading-relaxed text-xl'>
+						<p className='mb-8 leading-relaxed text-lg'>
 							First Taxis provides reliable 24/7 taxi and airport transfer
 							services across Gillingham, Shaftesbury, Mere, and Wincanton.
 						</p>
@@ -38,38 +38,57 @@ export default function Footer() {
 							Let's Get Social
 						</h3>
 						<p className='mb-8 leading-relaxed text-xl'>
-							Lorem ipsum dolor sit amet, at mei dolore tritani repudiandae. In
-							his nemore temporibus consequuntur.
+							You can connect with us on social media using the links below.
 						</p>
 
 						<div className='flex justify-center gap-5'>
 							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
-								<Facebook
-									size={30}
-									fill='black'
-									className='border-none'
-								/>
+								<a
+									href='https://www.facebook.com/Firsttaxisdorset'
+									target='_blank'
+								>
+									<Facebook
+										size={30}
+										fill='black'
+										className='border-none'
+									/>
+								</a>
 							</span>
 							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
-								<Twitter
-									size={30}
-									fill='black'
-									className='border-none'
-								/>
+								<a
+									href='https://www.instagram.com/firsttaxis'
+									target='_blank'
+								>
+									<Instagram
+										size={30}
+										fill='black'
+										className='border-none'
+									/>
+								</a>
 							</span>
 							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
-								<Youtube
-									size={30}
-									fill='black'
-									className='border-none'
-								/>
+								<a
+									href='https://www.youtube.com/'
+									target='_blank'
+								>
+									<Youtube
+										size={30}
+										fill='black'
+										className='border-none'
+									/>
+								</a>
 							</span>
 							<span className='rounded-xl bg-gray-400 hover:bg-yellow-500 p-2'>
-								<Video
-									size={30}
-									fill='black'
-									className='border-none'
-								/>
+								<a
+									href='https://meet.google.com/'
+									target='_blank'
+								>
+									<Video
+										size={30}
+										fill='black'
+										className='border-none'
+									/>
+								</a>
 							</span>
 						</div>
 					</div>
@@ -80,8 +99,8 @@ export default function Footer() {
 							Contact Us
 						</h3>
 						<p className='mb-8 leading-relaxed'>
-							Vim ad prima vivendum consetetur viderer feugiat at pro, mea
-							aperiam.
+							We’ll be happy to respond to your message—please feel free to
+							reach out anytime.
 						</p>
 
 						<ul className='space-y-4 text-base'>
@@ -97,7 +116,7 @@ export default function Footer() {
 									size={18}
 									className='text-yellow-400'
 								/>
-								office@yourwebsite.com
+								hello@firsttaxis.co.uk
 							</li>
 							<li className='flex items-center gap-4'>
 								<span className='text-yellow-400 text-xl'>
@@ -110,7 +129,7 @@ export default function Footer() {
 				</div>
 
 				{/* Scroll top */}
-				<div className='mt-20 flex justify-center'>
+				<div className='mt-10 flex justify-center'>
 					<button
 						onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 						className='flex h-14 w-14 items-center justify-center rounded-full bg-yellow-400 text-xl font-bold text-black hover:bg-yellow-500 transition'
@@ -125,14 +144,5 @@ export default function Footer() {
 				© 2026 First Taxis
 			</div>
 		</footer>
-	);
-}
-
-/* ---------- Social Icon ---------- */
-function SocialIcon({ children }: { children: React.ReactNode }) {
-	return (
-		<div className='flex h-11 w-11 cursor-pointer items-center justify-center rounded bg-white/20 text-white hover:bg-yellow-400 hover:text-black transition'>
-			{children}
-		</div>
 	);
 }
