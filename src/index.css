@@ -14,6 +14,9 @@ All colors MUST be HSL.
 		--background: 0 0% 100%;
 		--foreground: 0 0% 8%;
 
+		--header-bg: 0 0% 0%;
+		--header-fg: 0 0% 100%;
+
 		--card: 0 0% 100%;
 		--card-foreground: 0 0% 8%;
 
@@ -145,6 +148,16 @@ All colors MUST be HSL.
 		--shadow-xl:
 			0 1px 3px 0px hsl(0 0% 0% / 0.15), 0 8px 10px -1px hsl(0 0% 0% / 0.15);
 		--shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.35);
+	}
+
+	.header-light {
+		--header-bg: var(--background);
+		--header-fg: var(--foreground);
+	}
+
+	.header-dark {
+		--header-bg: 0 0% 0%;
+		--header-fg: 0 0% 100%;
 	}
 }
 
