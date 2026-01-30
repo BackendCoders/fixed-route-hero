@@ -97,7 +97,7 @@ const Header = ({ heroRef }: HeaderProps) => {
 
 										{/* Dropdown Menu */}
 										{isServicesOpen && (
-											<div className='absolute top-[71%] left-0 mt-2 bg-[hsl(var(--header-bg))]/90 backdrop-blur-sm border border-border rounded-lg shadow-lg min-w-[200px] py-2'>
+											<div className='absolute top-[70%] left-0 mt-2 bg-[hsl(var(--header-bg))]/90 backdrop-blur-sm border border-border rounded-lg shadow-lg min-w-[200px] py-2'>
 												{link.subItems?.map((subItem) => (
 													<NavLink
 														key={subItem.href}
